@@ -3,9 +3,10 @@
 ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/jkaninda/nginx-fpm?style=flat-square)
 ![Docker Pulls](https://img.shields.io/docker/pulls/jkaninda/nginx-fpm?style=flat-square)
 
-# Nginx FPM Web Server
+# Nginx Web server for PHP FPM
 
-> 🐳 Full Docker image for a PHP-FPM container created to run Laravel or any php based applications.
+
+> 🐳 Nginx Web server for PHP FPM.
 
 - [Docker Hub](https://hub.docker.com/r/jkaninda/nginx-fpm)
 - [Github](https://github.com/jkaninda/nginx-fpm)
