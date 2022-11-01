@@ -21,9 +21,9 @@ jobs:
         name: Set environment for branch
         run: |
           set -x
-          if [[ $GITHUB_REF == 'refs/heads/master' ]]; then
+          if [[ $GITHUB_REF == 'refs/heads/main' ]]; then
             echo "TAG_NAME=latest" >> "$GITHUB_ENV"
-            echo "runs-on: master branch"
+            echo "runs-on: main branch"
           else
             echo "TAG_NAME=${{ github.head_ref || github.ref_name }}" >> "$GITHUB_ENV"
             echo "runs-on: ${{ github.head_ref || github.ref_name }} branch"
@@ -45,4 +45,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: "${{env.BUILDKIT_IMAGE}}:${{env.TAG_NAME}}"
+          tags: |
+           "${{env.BUILDKIT_IMAGE}}:${{env.TAG_NAME}}"
+           "${{env.BUILDKIT_IMAGE}}:alpine"
+          
