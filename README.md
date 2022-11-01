@@ -25,7 +25,7 @@ services:
      volumes:
       - ./:/var/www/html
      environment:
-       - DOCUMENT_ROOT=/var/www/html/public
+       - DOCUMENT_ROOT=/var/www/html/
        - CLIENT_MAX_BODY_SIZE=20M
        - PHP_FPM_HOST=php-fpm-host:9000 
      networks:
