@@ -1,7 +1,7 @@
 version: '3'
 services:
     php-fpm:
-        image: jkaninda/laravel-php-fpm:latest 
+        image: jkaninda/laravel-php-fpm:8.1 
         container_name: php-fpm
         restart: unless-stopped     
         volumes:
@@ -16,6 +16,8 @@ services:
      image: jkaninda/nginx-fpm:alpine
      container_name: nginx-server
      restart: unless-stopped
+     depends_on:
+      -  php-fpm
      ports:
       - 80:80
      volumes:
