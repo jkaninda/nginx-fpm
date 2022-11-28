@@ -4,11 +4,6 @@ on:
   push:
     branches:
       - '**'
-  pull_request:
-    types:
-      - closed
-    branches:
-      - '**'
 
 env:
   #BRANCH_NAME: ${{ github.head_ref || github.ref_name }} 
