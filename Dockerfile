@@ -1,4 +1,4 @@
-FROM nginx:stable
+FROM nginx:alpine
 
 ARG WORKDIR=/var/www/html
 ENV DOCUMENT_ROOT=${WORKDIR}
