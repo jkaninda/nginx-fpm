@@ -43,5 +43,4 @@ jobs:
           push: true
           tags: |
            "${{env.BUILDKIT_IMAGE}}:${{env.TAG_NAME}}"
-           "${{env.BUILDKIT_IMAGE}}:alpine"
           
