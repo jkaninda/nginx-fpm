@@ -1,10 +1,13 @@
-name: Build
-
+name: Manual-build
 on:
-  push:
-    branches:
-      - main
-
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      docker_tag:
+        description: 'Docker tag'
+        required: true
+        default: 'latest' 
+        type: string
 env:
   #BRANCH_NAME: ${{ github.head_ref || github.ref_name }} 
   BUILDKIT_IMAGE: jkaninda/nginx-fpm
@@ -45,7 +48,7 @@ jobs:
           tags: |
            "${{env.BUILDKIT_IMAGE}}:alpine"
       -
-        name: Build and push
+        name: Build and push stable version
         uses: docker/build-push-action@v3
         with:
           push: true
