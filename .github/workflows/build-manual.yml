@@ -48,7 +48,7 @@ jobs:
           tags: |
            "${{env.BUILDKIT_IMAGE}}:alpine"
       -
-        name: Build and push
+        name: Build and push stable version
         uses: docker/build-push-action@v3
         with:
           push: true
