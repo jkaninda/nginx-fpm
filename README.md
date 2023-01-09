@@ -1,5 +1,4 @@
-![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/jkaninda/nginx-fpm?style=flat-square)
-![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/jkaninda/nginxp-fpm?style=flat-square)
+[![Build](https://github.com/jkaninda/nginx-fpm/actions/workflows/build.yml/badge.svg)](https://github.com/jkaninda/nginx-fpm/actions/workflows/build.yml)
 ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/jkaninda/nginx-fpm?style=flat-square)
 ![Docker Pulls](https://img.shields.io/docker/pulls/jkaninda/nginx-fpm?style=flat-square)
 
