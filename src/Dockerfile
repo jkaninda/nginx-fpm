@@ -11,12 +11,12 @@ RUN rm -rf /etc/nginx/sites-enabled/default
 RUN rm -rf /etc/nginx/sites-available/default
 
 RUN rm -rf /etc/nginx/nginx.conf
-COPY  nginx/proxy.inc /etc/nginx/proxy.inc
-COPY  nginx/nginx.conf /etc/nginx/nginx.conf
+COPY  src/nginx/proxy.inc /etc/nginx/proxy.inc
+COPY  src/nginx/nginx.conf /etc/nginx/nginx.conf
 
 WORKDIR /var/www/html
 
-COPY ./entrypoint.sh /usr/local/bin/
+COPY src/entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
 RUN ln -s /usr/local/bin/entrypoint.sh /
 
