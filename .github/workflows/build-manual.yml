@@ -55,6 +55,7 @@ jobs:
           file: "./src/Dockerfile"
           platforms: linux/amd64,linux/arm64
           tags: |
-           "${{env.BUILDKIT_IMAGE}}:${{env.TAG_NAME}}"
            "${{env.BUILDKIT_IMAGE}}:stable"
+           "${{env.BUILDKIT_IMAGE}}:${{env.TAG_NAME}}"
+           
           
