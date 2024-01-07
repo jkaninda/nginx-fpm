@@ -6,4 +6,6 @@ if [ $# -eq 0 ]
     tag=$1
 fi
 
-docker build -t jkaninda/nginx-fpm:$tag .
+docker build -f src/Dockerfile -t jkaninda/nginx-fpm:$tag .
+
+docker compose up -d
