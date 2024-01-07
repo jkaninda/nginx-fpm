@@ -38,7 +38,7 @@ services:
 version: '3'
 services:
     php-fpm:
-        image: jkaninda/laravel-php-fpm:8.1 
+        image: jkaninda/laravel-php-fpm 
         container_name: php-fpm
         restart: unless-stopped 
         pull_policy: if_not_present
@@ -51,7 +51,7 @@ services:
             - default #if you're using networks between containers
     #Nginx server
     nginx-server:
-     image: jkaninda/nginx-fpm:alpine
+     image: jkaninda/nginx-fpm:stable
      container_name: nginx-server
      restart: unless-stopped
      depends_on:
