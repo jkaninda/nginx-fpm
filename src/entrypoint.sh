@@ -1,10 +1,4 @@
 #!/bin/sh
-Red='\033[0;31m'          # Red
-Green='\033[0;32m'        # Green
-echo ""
-echo "***********************************************************"
-echo " Starting Nginx-FPM Docker Container                 "
-echo "***********************************************************"
 
 set -e
 
@@ -59,7 +53,7 @@ set -e
 EOF
 
 echo ""
-echo "**********************************"
-echo "     Starting Nginx web server...     "
-echo "***********************************"
+echo "*********************************************"
+echo "     Starting Nginx web server...            "
+echo "**********************************************"
 /usr/sbin/nginx -g "daemon off;"
