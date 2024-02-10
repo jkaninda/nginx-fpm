@@ -34,7 +34,7 @@ set -e
     fastcgi_hide_header X-Runtime;
 
     location / {
-        try_files \$uri \$uri/ /index.php?\$query_string;
+        try_files \$uri \$uri/ /index.php\$is_args\$args;
         gzip_static on;
     }
     location ~ \.css {
